@@ -1,0 +1,35 @@
+.image-logo {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circle */
+    border: 2px solid #fff; /* Adds a black border around the circle */
+  }
+
+  .nav-link{
+    
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover, .nav-link:active{
+    color: #fff;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before{
+    width: 100%;
+    visibility: visible;
+}
+ 
